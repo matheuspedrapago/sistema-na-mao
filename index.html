@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema na Mão</title>
+    <link rel="icon" type="image/x-icon" href="/logos/SNM favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">  <!-- Add a container div -->
+        <img src="logos/SNM logog.png" alt="Sistema na Mão" id="main-logo"> <!-- Add logo -->
+
+    <h1>Sistema na Mão</h1>
+
+    <div class="filter-section">
+        <h2>Filtrar por Segmento:</h2>
+        <select id="segmento">
+            <option value="">Selecione um Segmento</option>
+         <!--Added in the JavaScript-->
+        </select>
+    </div>
+
+    <div class="filter-section">
+        <h2>Filtrar por POS:</h2>
+        <select id="maquina" disabled>
+            <option value="">Selecione uma Máquina</option>
+        </select>
+    </div>
+
+    <div class="filter-section">
+        <h2>Filtrar por Funcionalidade:</h2>
+        <select id="funcionalidade" disabled>
+            <option value="">Selecione uma Funcionalidade</option>
+        </select>
+    </div>
+
+    <div id="recommendation" class="recommendation-section">
+        <h2>Sistemas Recomendados:</h2>  <!-- Changed heading -->
+        <div id="recommendation-list">  <!-- Container for multiple recommendations -->
+            <!-- Recommendations will be added here dynamically -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+body {
+    font-family: sans-serif;
+    margin: 0; /* Remove default body margin */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    min-height: 100vh; /* Ensure at least full viewport height */
+    background-color: #f0f0f0; /* Optional background color */
+}
+
+.container {
+    width: 80%; /* Or any desired width */
+    max-width: 800px; /* Optional max-width */
+    margin: 20px auto; /* Top/bottom margin, auto left/right for centering */
+    padding: 20px;
+    background-color: #fff; /* Optional background color */
+    border: 1px solid #ddd;  /* Optional border */
+    border-radius: 8px;    /* Optional rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional shadow */
+    text-align: center; /* Center text within the container */
+}
+
+#main-logo {
+    max-width: 200px; /* Adjust as needed */
+    margin-bottom: 20px; /* Space below the logo */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+     text-align: left;
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px; /* Adjust as needed */
+}
+
+.recommendation-section {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    display: none; /* Initially hidden */
+    text-align: left;
+}
+
+
+#recommendation-list {
+    /* Add styles for the overall list container (optional) */
+}
+
+.recommendation-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px; /* Space between recommendations */
+    display: flex;       /* Use flexbox for layout */
+    align-items: center; /* Vertically center content */
+}
+
+.recommendation-item img {
+    max-width: 100px; /* Smaller image in the list */
+    margin-right: 15px; /* Space between image and text */
+    border: 1px solid #eee;
+}
+
+.recommendation-item .recommendation-text {
+    flex-grow: 1; /* Allow text to take remaining space */
+}
+
+.recommendation-item h3 { /* Style the system name */
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
+
+.recommendation-item p { /* Style the description */
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+}
+.recommendation-item a {
+    color: blue;
+    text-decoration: none; /* Remove underline */
+}
+
+.recommendation-item a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
