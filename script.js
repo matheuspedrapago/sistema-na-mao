@@ -1,92 +1,48 @@
-// Data (Extracted, organized, and *normalized*)
 const data = {
   "FOOD SERVICE": {
-      "A8, P2, GPOS700x": { // Normalized machine key
-          "Pagamento Integrado": ["Menew", "Odhen POS | Teknisa"],
-      },
-      "A8, P2": {  // Normalized
-          "Pagamento Integrado": ["Colibri", "PDV Legal", "Lexsis", "F-rest", "Metre Sistemas", "Picks", "Yooga", "Raffinato", "Click Soluções", "SOMA", "Chef Mio", "DWPDV", "Plana tecnologia","Controle na Mão","Qmenu","Beerpass","Vedas Sistemas"],
-          "Auto credenciamento":["Pigz"],
-          "Pagamento integrado e por link":["Eyemobile"],
-          "Pagamento integrado, TEF e Autoatendimento":["ContaHUB"]
-      },
-      "Pagar.me": {
-          "Pagamento Integrado": ["Neemo"],
-          "Atendimento automatizado": ["Pedzap"]
-      },
-      "S920, Q92": { // Normalized
-          "Pagamento Integrado": ["STI", "Delivery Much","Biz System","Sismec Mobile"],
-          "Atendimento personalizado":["NXZ"]
-      },
-      "P2":{
-        "Pagamento Integrado":["KCMS"],
+    "Digital": {
+        "Pagamento Integrado": ["Neemo"],
+        "Assinatura": ["Pedzap"] // Changed from "Atendimento automatizado"
+    },
+    "TEF": {
+        "Pagamento Integrado": ["RP Info"]
+    },
+    "Android 3G": {
+        "Pagamento Integrado": ["STI", "Delivery Much", "Biz System", "Sismec Mobile", "Prover"],
+        "Atendimento personalizado": ["NXZ"], // Keep original, as it has no mapping
+        "Autonomia p/ funcionário": ["Pigz"],
+        "Integração de sistemas": ["Rek Parking"], //Was "Vínculo entre um Celular Android..."
+        "Ponto inteligente":["Vibra"], //Was "App para cadastramento dos pontos..."
+         "Pagamento integrado e Conciliação":["RDF Comanda","Vetwork", "Ultracar", "EasyCarros"]
+    },
+      "Android 4G":{
+        "Pagamento Integrado": ["Menew", "Odhen POS | Teknisa","Colibri", "PDV Legal", "Lexsis", "F-rest", "Metre Sistemas", "Picks", "Yooga", "Raffinato", "Click Soluções", "SOMA", "Chef Mio", "DWPDV", "Plana tecnologia","Controle na Mão","Qmenu","Beerpass","Vedas Sistemas","KCMS","UniTech | UniTablet", "Build Solutions","MGM Garçom", "Sistema Pallas","BitBar", "Olga Pay", "App Garçom","Takeat","Gplus","Saipos","Suitable", "Navi Vendas", "Sagres","Controle na Mão","Qmenu","Beerpass","Vedas Sistemas","SWFast", "Simsoft", "Maistre"],
+        "Auto credenciamento":["Pigz"],
+        "Assinatura": ["Eyemobile", "ContaHUB","Metre Sistemas", "Picks", "Lexsis","F-rest", "SOMA", "DWPDV"], //Changed from multiple values
         "Personalização":["Picbuy"],
-         "Solução integrada embarcada nas maquininhas":["BitBar", "Olga Pay", "App Garçom", "Controle na Mão","Gplus","Qmenu","Beerpass","Gototem"]
-      },
-    "P2, A8, GPOS":{ // Normalized
-       "Solução integrada embarcada nas maquininhas": ["UniTech | UniTablet"],
-        "Pagamento Integrado":["Build Solutions","Biz System"]
+        "Integração de sistemas":["BitBar", "Olga Pay", "App Garçom", "Controle na Mão","Gplus","Qmenu","Beerpass","Gototem", "Navi Vendas", "UniTech | UniTablet", "Navi Vendas", "Navi Vendas", "SWFast", "Simsoft","Vedas Sistemas", "Suitable", "Gototem", "Simsoft","Total Player", "Mobtickets", "Novaoito","Festas TOP e W2R POS", "Tiketo", "Klockz", "Doblefy", "Quick Pay Soft", "Furafilla","Servo Fiel", "Curia Pay","Maistre", "Quality","Sispet", "CarMob", "Valeti", "Adaptive Sistemas", "Jump Park", "ACS PDV MÓVEL", "Valet Fitpark", "Embratecc Tecnologia", "Selfparking", "Argo Sistemas", "Sanvitron", "EcoLoja","Presence Sales", "AppMoove","Zenitech", "Multicom", "Soft TI"],
+        "Comanda na máquina":["ContaHUB"], //Was "Plataforma integrada"
+        "Recarga de crédito":["Almasis", "Santa Ficha"] //Was "Emissão de tickets..."
     },
-    "A8":{
-        "Pagamento Integrado":["Build Solutions"]
-    },
-     "S920, Q92, V240, A8, P2":{ // Normalized
-        "Auto credenciamento":["Pigz"]
-     },
-    "S920, Q92, V240":{ // Normalized
-       "Pagamento Integrado":["Build Solutions"]
-    },
-    "P2, A8, GPOS700x":{ // Normalized
-      "Solução integrada embarcada nas maquininhas":["MGM Garçom", "Sistema Pallas","BitBar", "Olga Pay", "App Garçom"]
-    },
-    "P2, L3, L4":{  // Normalized
-      "Solução integrada embarcada nas maquininhas":["Takeat","Gplus","Saipos","Suitable"]
-    },
-
-     "A8, P2, L3, L4, GPOS700X":{ // Normalized
-       "Solução integrada embarcada nas maquininhas":["Vedas Sistemas"]
-     },
-
-    "GPOS 700":{
-      "Solução integrada embarcada nas maquininhas":["Navi Vendas"]
-    },
-
-    "P2, A8, L4":{ // Normalized
-      "Solução integrada embarcada nas maquininhas":["SWFast"]
-    },
-     "L4":{
-      "Solução integrada embarcada nas maquininhas":["Simsoft"]
-    },
-     "TEF":{
-       "Pagamento Integrado":["RP Info"]
-     },
-      "PSP/ Subadquirente":{
-        "Pagamento por QR code":["Payby"]
-      }
   },
-  "IGREJAS":{
-   "A8, P2, Pagar.me":{ // Normalized
-      "Solução integrada embarcada nas maquininhas":["Theos"]
-   },
-   "A8, P2":{ // Normalized
-     "Solução integrada embarcada nas maquininhas":["Servo Fiel", "Curia Pay"]
-   },
-   "S920, Q92, V240":{ // Normalized
-     "Pagamento Integrado":["Prover"]
-   },
-   "A8, P2, GPOS700X, L4":{ // Normalized
-     "Solução integrada embarcada nas maquininhas":["Maistre"]
-   }
- },
+  "IGREJAS": {
+    "Digital":{
+      "Integração de sistemas":["Theos"] //Was "Solução integrada..."
+    },
+    "Android 4G":{
+      "Integração de sistemas":["Servo Fiel", "Curia Pay", "Maistre"] //Was Solução integrada..
+    },
+    "Android 3G":{
+      "Pagamento Integrado":["Prover"] //Was Pagamento integrado
+    }
+  },
   "Lavanderia": {
-      "A8, P2": {  // Normalized
-          "Solução integrada embarcada nas maquininhas": ["Cicclo"]
-      },
-      "P2": {
-          "Solução integrada embarcada nas maquininhas": ["Maxpan", "Laundry Kit"]
-      }
-  },
+    "Android 4G": {
+      "Integração de sistemas": ["Cicclo", "Maxpan", "Laundry Kit"]
+    }
+  }
 };
+
 
 const systemDetails = {
   "Menew": { logo: "logos/menew_logo.png", link: "https://sites.google.com/stone.com.br/spandenovo/empresas-parceiras/empresas-investidas/menew?authuser=0" },
@@ -160,94 +116,47 @@ const systemDetails = {
 const recommendationMessages = {
 
   "FOOD SERVICE": {
-      "A8, P2, GPOS700x": {
-          "Pagamento Integrado": (systemName) => `Para Food Service, com integração de pagamento em máquinas A8, P2 e GPOS700x, o sistema ${systemName} atende bem.`,
-      },
-      "A8, P2":{
-        "Pagamento Integrado":(systemName) => `Para Food Service e Pagamento integrado, com máquinas A8 e P2, sugerimos o ${systemName}`,
-        "Auto credenciamento":(systemName) => `Para Food Service e Auto Credenciamento, com máquinas A8 e P2, sugerimos o ${systemName}`,
-        "Pagamento integrado e por link":(systemName) => `Para Food Service, com pagamento integrado ou por link, em máquinas A8 e P2, o ${systemName} é o ideal`,
-        "Pagamento integrado, TEF e Autoatendimento":(systemName) => `Para Food Service, com pagamento integrado, TEF e autoatendimento, em máquinas A8 e P2, o ${systemName} é o ideal`
-      },
-      "Pagar.me":{
-        "Pagamento Integrado":(systemName) => `Para Food Service, com pagamento integrado via Pagar.me, sugerimos o ${systemName}`,
-         "Atendimento automatizado":(systemName) => `Para Food Service, com atendimento automatizado via Pagar.me, sugerimos o ${systemName}`
-      },
-      "S920, Q92":{
-         "Pagamento Integrado":(systemName) => `Para Food Service e integração de pagamentos nas máquinas S920 e Q92, recomendamos o ${systemName}.`,
-         "Atendimento personalizado":(systemName) => `Para Food Service, com atendimento personalizado para S920 e Q92, o ${systemName} atende.`
-      },
-      "P2":{
-         "Pagamento Integrado":(systemName) => `Para Food Service e integração de pagamentos na maquininha P2, recomendamos o ${systemName}.`,
-         "Personalização":(systemName) => `Para Food Service, com personalização em máquinas P2, sugerimos o ${systemName}`,
-          "Solução integrada embarcada nas maquininhas":(systemName) => `Para Food Service e integração de pagamentos na maquininha P2, recomendamos o ${systemName}.`
-      },
-      "P2, A8, GPOS":{
-         "Solução integrada embarcada nas maquininhas":(systemName) => `Para Food Service, com solução integrada para as máquinas P2, A8 e GPOS, o ${systemName} é o ideal.`,
-         "Pagamento Integrado":(systemName) => `Para Food Service e integração de pagamentos nas máquinas P2, A8 e GPOS, recomendamos o ${systemName}.`
-      },
-      "A8":{
-         "Pagamento Integrado":(systemName) => `Para Food Service e integração de pagamentos na maquininha A8, recomendamos o ${systemName}.`
-      },
-      "S920, Q92, V240, A8, P2":{
-         "Auto credenciamento":(systemName) => `Para Food Service, com auto credenciamento nas máquinas S920, Q92, V240, A8 e P2, o ideal é o ${systemName}`
-      },
-      "S920, Q92, V240":{
-         "Pagamento Integrado":(systemName) => `Para Food Service e integração de pagamentos nas máquinas S920, Q92 e V240, recomendamos o ${systemName}.`
-      },
-    "P2, A8, GPOS700x":{
-        "Solução integrada embarcada nas maquininhas":(systemName) => `Para Food Service, com solução integrada embarcada nas maquininhas P2, A8 e GPOS700x, recomendamos ${systemName}`
+    "Digital": {
+      "Pagamento Integrado": (systemName) => `Para Food Service, com integração de pagamento digital, o sistema ${systemName} atende bem.`,
+      "Assinatura": (systemName) => `Para Food Service, com foco em assinatura e utilizando meio digital, o sistema ${systemName} é recomendado.`
     },
-     "P2, L3 e L4":{
-        "Solução integrada embarcada nas maquininhas":(systemName) => `Para Food Service, com solução integrada embarcada nas maquininhas P2, L3 e L4, recomendamos ${systemName}`
+    "TEF": {
+      "Pagamento Integrado": (systemName) => `Para Food Service, com integração de pagamento via TEF, o sistema ${systemName} é uma boa opção.`
     },
-     "P2 e A8":{
-        "Solução integrada embarcada nas maquininhas":(systemName) => `Para Food Service, com solução integrada embarcada nas maquininhas P2 e A8, recomendamos ${systemName}`
+    "Android 3G": {
+      "Pagamento Integrado": (systemName) => `Para Food Service, com integração de pagamento em máquinas Android 3G (S920/Q92), o sistema ${systemName} é recomendado.`,
+      "Atendimento personalizado": (systemName) => `Para Food Service com atendimento personalizado em máquinas Android 3G, o sistema ${systemName} é recomendado.`,
+       "Autonomia p/ funcionário":(systemName) => `Para Food Service, buscando dar autonomia para o funcionário, em máquinas Android 3G, o sistema ${systemName} atende bem.`,
+        "Integração de sistemas":(systemName) => `Para Food Service, buscando integração de sistemas, em máquinas Android 3G, o sistema ${systemName} atende bem.`,
+        "Ponto inteligente":(systemName) => `Para Food Service, buscando um ponto inteligente, em máquinas Android 3G, o sistema ${systemName} atende bem.`,
+        "Pagamento integrado e Conciliação":(systemName) => `Para Food Service, buscando pagamento integrado e Conciliação, em máquinas Android 3G, o sistema ${systemName} atende bem.`
     },
-    "A8, P2, L3, L4, GPOS700X":{
-       "Solução integrada embarcada nas maquininhas":(systemName) => `Para Food Service, com solução integrada embarcada nas maquininhas A8, P2, L3, L4 e GPOS700X, recomendamos ${systemName}`
-    },
-     "GPOS 700":{
-        "Solução integrada embarcada nas maquininhas":(systemName) => `Para Food Service, com solução integrada embarcada nas maquininhas GPOS 700, recomendamos ${systemName}`
-    },
-    "P2, A8, GPOS 700":{
-        "Solução integrada embarcada nas maquininhas":(systemName) => `Para Food Service, com solução integrada embarcada nas maquininhas P2, A8, GPOS 700, recomendamos ${systemName}`
-    },
-     "P2, A8 e L4":{
-        "Solução integrada embarcada nas maquininhas":(systemName) => `Para Food Service, com solução integrada embarcada nas maquininhas P2, A8 e L4, recomendamos ${systemName}`
-    },
-      "L4":{
-        "Solução integrada embarcada nas maquininhas":(systemName) => `Para Food Service, com solução integrada embarcada nas maquininhas L4, recomendamos ${systemName}`
-    },
-     "TEF":{
-        "Pagamento Integrado":(systemName) => `Para Food Service, com pagamento integrado via TEF, indicamos o ${systemName}`
-    },
-    "PSP/ Subadquirente":{
-        "Pagamento por QR code":(systemName) => `Para Food Service, com pagamento via QR Code por PSP/Subadquirente, sugerimos o ${systemName}`
+    "Android 4G": {
+      "Pagamento Integrado": (systemName) => `Para Food Service, com integração de pagamento em máquinas Android 4G, o sistema ${systemName} é recomendado.`,
+      "Auto credenciamento": (systemName) => `Para Food Service com auto credenciamento em máquinas Android 4G, o sistema ${systemName} atende.`,
+      "Assinatura": (systemName) => `Para Food Service, com assinatura em máquinas Android 4G, o sistema ${systemName} atende.`,
+      "Personalização": (systemName) => `Para Food Service, com personalização em máquinas Android 4G, o sistema ${systemName} atende.`,
+      "Integração de sistemas":(systemName) => `Para Food Service, buscando integração de sistemas, em máquinas Android 4G, o sistema ${systemName} atende bem.`,
+      "Comanda na máquina":(systemName) => `Para Food Service, buscando comanda na máquina, em máquinas Android 4G, o sistema ${systemName} atende bem.`,
+      "Recarga de crédito":(systemName) => `Para Food Service, buscando recarga de crédito, em máquinas Android 4G, o sistema ${systemName} atende bem.`
     }
   },
- "IGREJAS":{
-   "A8, P2, Pagar.me":{
-      "Solução integrada embarcada nas maquininhas":(systemName) => `Para Igrejas, com solução integrada embarcada nas maquininhas A8 e P2, e integração com Pagar.me, sugerimos o ${systemName}`
-   },
-   "A8, P2":{
-     "Solução integrada embarcada nas maquininhas":(systemName) => `Para Igrejas, com solução integrada embarcada nas maquininhas A8 e P2, o ${systemName} é uma boa opção.`
-   },
-   "S920, Q92, V240":{
-     "Pagamento Integrado":(systemName) => `Para Igrejas, com pagamento integrado e utilizando as máquinas S920, Q92 e V240, recomendamos o ${systemName}.`
-   },
-   "A8, P2, GPOS700X, L4":{
-     "Solução integrada embarcada nas maquininhas":(systemName) => `Para Igrejas, com solução integrada e utilizando as máquinas A8, P2, GPOS700X e L4, o sistema ${systemName} é o ideal.`
-   }
- },
-  "Lavanderia": {
-      "A8, P2": {
-          "Solução integrada embarcada nas maquininhas": (systemName) => `Para Lavanderias, com solução integrada embarcada nas maquininhas A8 e P2, recomendamos o ${systemName}.`
-      },
-      "P2": {
-          "Solução integrada embarcada nas maquininhas": (systemName) => `Para Lavanderias, a solução integrada embarcada na maquininha P2, ${systemName}, é a mais indicada.`
-      }
+  "IGREJAS": {
+    "Digital":{
+       "Integração de sistemas":(systemName) => `Para Igrejas, com solução integrada e utilizando meio digital, o sistema ${systemName} é o ideal.`
+    },
+     "Android 4G":{
+       "Integração de sistemas":(systemName) => `Para Igrejas, com solução integrada e utilizando máquinas Android 4G, o sistema ${systemName} é o ideal.`
+     },
+    "Android 3G":{
+      "Pagamento Integrado":(systemName) => `Para Igrejas, com pagamento integrado e utilizando as máquinas Android 3G(S920/Q92), recomendamos o ${systemName}.`
+    }
   },
+  "Lavanderia": {
+    "Android 4G": {
+      "Integração de sistemas": (systemName) => `Para Lavanderias com integração de sistemas e máquinas Android 4G, o sistema ${systemName} é recomendado.`
+    }
+  }
 };
 
 // DOM Elements
@@ -262,267 +171,249 @@ const searchButton = document.getElementById("search-button"); // Get the search
 
 // Function to update dropdown options for Maquina
 function updateMaquinaOptions() {
-  const selectedSegmento = segmentoSelect.value;
+    const selectedSegmento = segmentoSelect.value;
 
-  // Reset Maquina and Funcionalidade dropdowns
+    // Reset Maquina and Funcionalidade dropdowns
+    maquinaSelect.innerHTML = '<option value="">Selecione uma Máquina</option>';
+    funcionalidadeSelect.innerHTML = '<option value="">Selecione uma Funcionalidade</option>';
+    maquinaSelect.disabled = true;
+    funcionalidadeSelect.disabled = true;
+    recommendationDiv.style.display = "none";
+
+    if (selectedSegmento) {
+        maquinaSelect.disabled = false;
+        // Get and normalize the machine options
+        let machineOptions = new Set(); // Use a Set to avoid duplicates
+        for (const machine in data[selectedSegmento]) {
+          machineOptions.add(machine); //No need to normalize, already done
+        }
+
+        for (const machine of machineOptions) {
+            const option = document.createElement("option");
+            option.value = machine;
+            option.textContent = machine; // Display normalized name
+            maquinaSelect.appendChild(option);
+        }
+    }
+}
+
+// Function to update dropdown options for Funcionalidade
+// Function to update dropdown options for Funcionalidade
+function updateFuncionalidadeOptions() {
+    const selectedSegmento = segmentoSelect.value;
+    const selectedMaquina = maquinaSelect.value;
+
+    funcionalidadeSelect.innerHTML = '<option value="">Selecione uma Funcionalidade</option>';
+    funcionalidadeSelect.disabled = true;
+    recommendationDiv.style.display = "none";
+
+    if (selectedMaquina) {
+        funcionalidadeSelect.disabled = false;
+        if (data[selectedSegmento] && data[selectedSegmento][selectedMaquina]) {
+            // Create a Set to store unique functionalities
+            const uniqueFunctionalities = new Set();
+
+            // Iterate over the functionalities and add them to the Set
+            for (const funcionalidade in data[selectedSegmento][selectedMaquina]) {
+                uniqueFunctionalities.add(funcionalidade);
+            }
+
+            // Convert the Set back to an array and populate the dropdown
+            for (const funcionalidade of uniqueFunctionalities) {
+                const option = document.createElement("option");
+                option.value = funcionalidade;
+                option.textContent = funcionalidade;
+                funcionalidadeSelect.appendChild(option);
+            }
+        }
+    }
+}
+// Function to filter data based on search term (Now triggered by button)
+function filterBySearch() {
+  const searchTerm = searchInput.value.toLowerCase();
+
+  // Reset dropdowns and recommendation
+  segmentoSelect.value = "";
   maquinaSelect.innerHTML = '<option value="">Selecione uma Máquina</option>';
   funcionalidadeSelect.innerHTML = '<option value="">Selecione uma Funcionalidade</option>';
   maquinaSelect.disabled = true;
   funcionalidadeSelect.disabled = true;
   recommendationDiv.style.display = "none";
+  recommendationList.innerHTML = ''; // Clear previous recommendations
 
-  if (selectedSegmento) {
-      maquinaSelect.disabled = false;
-      // Get and normalize the machine options
-      let machineOptions = new Set(); // Use a Set to avoid duplicates
-      for (const machine in data[selectedSegmento]) {
-        machineOptions.add(normalizeMachineKey(machine));
-      }
-
-      for (const machine of machineOptions) {
-          const option = document.createElement("option");
-          option.value = machine;
-          option.textContent = machine; // Display normalized name
-          maquinaSelect.appendChild(option);
-      }
+  // 1. Filter Segmentos (and populate dropdown)
+  const matchingSegmentos = [];
+  for (const segmento in data) {
+    if (segmento.toLowerCase().includes(searchTerm)) {
+      matchingSegmentos.push(segmento);
+    }
   }
-}
+  populateSegmentoDropdown(matchingSegmentos); // Pass filtered segmentos
 
-// Function to update dropdown options for Funcionalidade
-function updateFuncionalidadeOptions() {
-  const selectedSegmento = segmentoSelect.value;
-  const selectedMaquina = maquinaSelect.value;
-
-  funcionalidadeSelect.innerHTML = '<option value="">Selecione uma Funcionalidade</option>';
-  funcionalidadeSelect.disabled = true;
-  recommendationDiv.style.display = "none";
-
-  if (selectedMaquina) {
-      funcionalidadeSelect.disabled = false;
-      const normalizedMaquina = selectedMaquina;
-      if (data[selectedSegmento] && data[selectedSegmento][normalizedMaquina]) {
-          for (const funcionalidade in data[selectedSegmento][normalizedMaquina]) {
-              const option = document.createElement("option");
-              option.value = funcionalidade;
-              option.textContent = funcionalidade;
-              funcionalidadeSelect.appendChild(option);
+  // 2. If a single segmento matches, auto-select it and populate maquinas
+  if (matchingSegmentos.length === 1) {
+    segmentoSelect.value = matchingSegmentos[0];
+    updateMaquinaOptions(); // Automatically populate Maquina dropdown
+  }
+    //3.  Search within systemDetails for matches
+    const matchingSystems = [];
+      for(const systemName in systemDetails){
+          if(systemName.toLowerCase().includes(searchTerm)){
+              matchingSystems.push(systemName);
           }
       }
-  }
-}
-// Function to filter data based on search term (Now triggered by button)
-function filterBySearch() {
-const searchTerm = searchInput.value.toLowerCase();
-
-// Reset dropdowns and recommendation
-segmentoSelect.value = "";
-maquinaSelect.innerHTML = '<option value="">Selecione uma Máquina</option>';
-funcionalidadeSelect.innerHTML = '<option value="">Selecione uma Funcionalidade</option>';
-maquinaSelect.disabled = true;
-funcionalidadeSelect.disabled = true;
-recommendationDiv.style.display = "none";
-recommendationList.innerHTML = ''; // Clear previous recommendations
-
-// 1. Filter Segmentos (and populate dropdown)
-const matchingSegmentos = [];
-for (const segmento in data) {
-  if (segmento.toLowerCase().includes(searchTerm)) {
-    matchingSegmentos.push(segmento);
-  }
-}
-populateSegmentoDropdown(matchingSegmentos); // Pass filtered segmentos
-
-// 2. If a single segmento matches, auto-select it and populate maquinas
-if (matchingSegmentos.length === 1) {
-  segmentoSelect.value = matchingSegmentos[0];
-  updateMaquinaOptions(); // Automatically populate Maquina dropdown
-}
-  //3.  Search within systemDetails for matches
-  const matchingSystems = [];
-    for(const systemName in systemDetails){
-        if(systemName.toLowerCase().includes(searchTerm)){
-            matchingSystems.push(systemName);
-        }
+      //4. If systems match, show them
+    if(matchingSystems.length > 0){
+       showMatchingSystems(matchingSystems);
     }
-    //4. If systems match, show them
-  if(matchingSystems.length > 0){
-     showMatchingSystems(matchingSystems);
-  }
 
 
 }
 
 function showMatchingSystems(systemNames){
-  recommendationList.innerHTML = ''; //Clear
+    recommendationList.innerHTML = ''; //Clear
 
-  systemNames.forEach(systemName => {
-      const systemData = systemDetails[systemName];
-      if(!systemData){
-          console.warn("No details found");
-          return;
-      }
-      const recommendationItem = document.createElement('div');
-      recommendationItem.classList.add('recommendation-item');
+    systemNames.forEach(systemName => {
+        const systemData = systemDetails[systemName];
+        if(!systemData){
+            console.warn("No details found");
+            return;
+        }
+        const recommendationItem = document.createElement('div');
+        recommendationItem.classList.add('recommendation-item');
 
-      const logoImg = document.createElement('img');
-      logoImg.src = systemData.logo;
-      logoImg.alt = `Logo do ${systemName}`;
-      recommendationItem.appendChild(logoImg);
+        const logoImg = document.createElement('img');
+        logoImg.src = systemData.logo;
+        logoImg.alt = `Logo do ${systemName}`;
+        recommendationItem.appendChild(logoImg);
 
-      const textContainer = document.createElement('div');
-      textContainer.classList.add('recommendation-text');
+        const textContainer = document.createElement('div');
+        textContainer.classList.add('recommendation-text');
 
-      const systemNameHeading = document.createElement('h3');
-      systemNameHeading.textContent = systemName;
-      textContainer.appendChild(systemNameHeading);
+        const systemNameHeading = document.createElement('h3');
+        systemNameHeading.textContent = systemName;
+        textContainer.appendChild(systemNameHeading);
 
-      //No custom message if searching by name
-      const link = document.createElement('a');
-      link.href = systemData.link;
-      link.textContent = "Saiba mais";
-      link.target = "_blank";
-      textContainer.appendChild(link);
+        //No custom message if searching by name
+        const link = document.createElement('a');
+        link.href = systemData.link;
+        link.textContent = "Saiba mais";
+        link.target = "_blank";
+        textContainer.appendChild(link);
 
-      recommendationItem.appendChild(textContainer);
-      recommendationList.appendChild(recommendationItem);
+        recommendationItem.appendChild(textContainer);
+        recommendationList.appendChild(recommendationItem);
 
-  });
-   recommendationDiv.style.display = "block";
+    });
+     recommendationDiv.style.display = "block";
 
 }
 
 // --- Modified populateSegmentoDropdown to accept a list of segmentos ---
 function populateSegmentoDropdown(segmentos = Object.keys(data)) {
-  segmentoSelect.innerHTML = '<option value="">Selecione um Segmento</option>'; // Clear existing options
-  for (const segmento of segmentos) { // Iterate over provided list
-      const option = document.createElement("option");
-      option.value = segmento;
-      option.textContent = segmento;
-      segmentoSelect.appendChild(option);
-  }
+    segmentoSelect.innerHTML = '<option value="">Selecione um Segmento</option>'; // Clear existing options
+    for (const segmento of segmentos) { // Iterate over provided list
+        const option = document.createElement("option");
+        option.value = segmento;
+        option.textContent = segmento;
+        segmentoSelect.appendChild(option);
+    }
 }
 // Function to show the recommendation (Now handles multiple recommendations)
 function showRecommendation() {
-  const selectedSegmento = segmentoSelect.value;
-  const selectedMaquina = maquinaSelect.value;
-  const selectedFuncionalidade = funcionalidadeSelect.value;
+    const selectedSegmento = segmentoSelect.value;
+    const selectedMaquina = maquinaSelect.value;
+    const selectedFuncionalidade = funcionalidadeSelect.value;
+    // Clear previous recommendations
+    recommendationList.innerHTML = '';
 
-  // Clear previous recommendations
-  recommendationList.innerHTML = '';
+    if (selectedSegmento && selectedMaquina && selectedFuncionalidade) {
+        let recommendedSystems = data[selectedSegmento][selectedMaquina][selectedFuncionalidade];
+        // Ensure recommendedSystems is ALWAYS an array, even for single systems
+        if (!Array.isArray(recommendedSystems)) {
+            recommendedSystems = [recommendedSystems];
+        }
+        // Limit to a maximum of 3 recommendations
+        recommendedSystems = recommendedSystems.slice(0, 5);
 
-  if (selectedSegmento && selectedMaquina && selectedFuncionalidade) {
-      let recommendedSystems = data[selectedSegmento][selectedMaquina][selectedFuncionalidade];
-      // Ensure recommendedSystems is an array
-      if (!Array.isArray(recommendedSystems)) {
-          recommendedSystems = [recommendedSystems]; // Convert to array if it's not
-      }
+        // Create a recommendation element for each system
+        recommendedSystems.forEach(systemName => {
+           const systemData = systemDetails[systemName];
+            if (!systemData) {
+              console.warn(`No details found for system: ${systemName}`);
+              return; // Skip if no details for this system
+            }
+            const recommendationItem = document.createElement('div');
+            recommendationItem.classList.add('recommendation-item');
 
-      // Limit to a maximum of 3 recommendations
-      recommendedSystems = recommendedSystems.slice(0, 3);
+            const logoImg = document.createElement('img');
+            logoImg.src = systemData.logo;
+            logoImg.alt = `Logo do ${systemName}`;
+            recommendationItem.appendChild(logoImg);
 
-      // Create a recommendation element for each system
-      recommendedSystems.forEach(systemName => {
-          const systemData = systemDetails[systemName]; // Get details
-          if (!systemData) {
-            console.warn(`No details found for system: ${systemName}`);
-            return; // Skip if no details
-          }
-          const recommendationItem = document.createElement('div');
-          recommendationItem.classList.add('recommendation-item');
+            const textContainer = document.createElement('div');
+            textContainer.classList.add('recommendation-text');
 
-          const logoImg = document.createElement('img');
-          logoImg.src = systemData.logo;
-          logoImg.alt = `Logo do ${systemName}`;
-          recommendationItem.appendChild(logoImg);
+            const systemNameHeading = document.createElement('h3');
+            systemNameHeading.textContent = systemName;
+            textContainer.appendChild(systemNameHeading);
+          //ADD CUSTOM MESSAGE
+          const customMessage = document.createElement('p');
+          customMessage.textContent = recommendationMessages[selectedSegmento][selectedMaquina][selectedFuncionalidade](systemName);
+          textContainer.appendChild(customMessage);
 
-          const textContainer = document.createElement('div');
-          textContainer.classList.add('recommendation-text');
+            const link = document.createElement('a');
+            link.href = systemData.link;
+            link.textContent = "Saiba mais";
+            link.target = "_blank";
+            textContainer.appendChild(link);
 
-          const systemNameHeading = document.createElement('h3');
-          systemNameHeading.textContent = systemName;
-          textContainer.appendChild(systemNameHeading);
-        //ADD CUSTOM MESSAGE
-        const customMessage = document.createElement('p');
-        customMessage.textContent = recommendationMessages[selectedSegmento][selectedMaquina][selectedFuncionalidade](systemName);
-        textContainer.appendChild(customMessage);
-
-          const link = document.createElement('a');
-          link.href = systemData.link;
-          link.textContent = "Saiba mais";
-          link.target = "_blank";
-          textContainer.appendChild(link);
-
-          recommendationItem.appendChild(textContainer);
-          recommendationList.appendChild(recommendationItem);
-      });
-
-      recommendationDiv.style.display = "block"; // Show the main container
-  } else {
-      recommendationDiv.style.display = "none"; // Hide
-  }
+            recommendationItem.appendChild(textContainer);
+            recommendationList.appendChild(recommendationItem);
+        });
+        recommendationDiv.style.display = "block"; // Show recommendations
+    } else {
+        recommendationDiv.style.display = "none"; // Hide if not all selected
+    }
 }
 
 
 // --- Normalization Function ---
 function normalizeMachineKey(key) {
-  // Convert to a consistent format: lowercase, sorted alphabetically, comma-separated
-  const parts = key.split(/[, | e ]+/).filter(part => part !== ""); // Split by ", ", " ", or " e "
-  const normalizedParts = parts.map(part => part.trim().toUpperCase()); // Trim and uppercase
-  normalizedParts.sort();  // Sort alphabetically
+    key = key.toLowerCase(); // Convert to lowercase for case-insensitivity
 
-  // Handle special combinations
-  if (normalizedParts.includes("A8") && normalizedParts.includes("P2") && normalizedParts.includes("GPOS700X")) {
-      return "A8, P2, GPOS700x";
-  }
-    if (normalizedParts.includes("S920") && normalizedParts.includes("Q92") && normalizedParts.includes("V240")&& normalizedParts.includes("A8") && normalizedParts.includes("P2")) {
-      return "S920, Q92, V240, A8, P2";
-  }
-   if (normalizedParts.includes("S920") && normalizedParts.includes("Q92") && normalizedParts.includes("V240")) {
-      return "S920, Q92, V240";
-  }
-  if (normalizedParts.includes("A8") && normalizedParts.includes("P2") && normalizedParts.includes("PAGAR.ME")) {
-      return "A8, P2, Pagar.me";
-  }
-  if (normalizedParts.includes("A8") && normalizedParts.includes("P2")) {
-      return "A8, P2";
-  }
-   if (normalizedParts.includes("P2") && normalizedParts.includes("A8") && normalizedParts.includes("GPOS")) {
-      return "P2, A8, GPOS";
-  }
-  if (normalizedParts.includes("S920") && normalizedParts.includes("Q92")) {
-      return "S920, Q92";
-  }
-   if (normalizedParts.includes("A8") && normalizedParts.includes("P2") && normalizedParts.includes("GPOS") && normalizedParts.includes("L3") && normalizedParts.includes("L4")) {
-      return "A8, P2, L3, L4, GPOS700X";
-  }
-
-
-  return normalizedParts.join(', '); // Join with commas and spaces
+    if (key.includes("pagar.me")) {
+        return "Digital";
+    } else if (key.includes("tef")) {
+        return "TEF";
+    } else if (key.includes("s920") || key.includes("q92")) {
+        return "Android 3G";
+    } else {
+        return "Android 4G"; // Default case
+    }
 }
 
-
-
-// --- Initial setup: Add event listeners ---
+// --- Event Listeners ---
 segmentoSelect.addEventListener("change", updateMaquinaOptions);
 maquinaSelect.addEventListener("change", updateFuncionalidadeOptions);
 funcionalidadeSelect.addEventListener("change", showRecommendation);
-// Add event listener to the search button
 searchButton.addEventListener("click", filterBySearch);
-searchInput.addEventListener("keyup", function(event) {  // <--- This is the added block
-  if (event.key === "Enter") {
-      filterBySearch(); // Call the same filter function
-  }
-});
 
+// Add event listener for "Enter" key in search input
+searchInput.addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+        filterBySearch(); // Call the same filter function
+    }
+});
 
 // --- Initial population of Segmento dropdown ---
 function populateSegmentoDropdown(segmentos = Object.keys(data)) {
-  segmentoSelect.innerHTML = '<option value="">Selecione um Segmento</option>'; // Clear existing options
-  for (const segmento of segmentos) {
-      const option = document.createElement("option");
-      option.value = segmento;
-      option.textContent = segmento;
-      segmentoSelect.appendChild(option);
-  }
+    segmentoSelect.innerHTML = '<option value="">Selecione um Segmento</option>'; // Clear existing options
+    for (const segmento of segmentos) { // Iterate over provided list
+        const option = document.createElement("option");
+        option.value = segmento;
+        option.textContent = segmento;
+        segmentoSelect.appendChild(option);
+    }
 }
 populateSegmentoDropdown(); // Call on load
